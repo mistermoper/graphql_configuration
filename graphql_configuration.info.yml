@@ -1,0 +1,7 @@
+name: GraphQL Configuration
+type: module
+description: 'Expose configuration entities and objects in GraphQL.'
+package: GraphQL
+configure: graphql_configuration.config_page
+dependencies:
+  - graphql_core
