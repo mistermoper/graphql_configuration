@@ -69,7 +69,7 @@ class ConfigEntityFieldDeriver extends DeriverBase implements ContainerDeriverIn
           // Only filter by string for testing.
           if ($fieldSchema['type'] == 'string') {
             $this->derivatives[$typeId . ':' . $fieldName] = [
-              'parents' => ['ConfigEntity' . StringHelper::camelCase($typeId), 'Entity'],
+              'parents' => [StringHelper::camelCase('ConfigEntity', $typeId), 'ConfigEntity'],
               'name' => $fieldName,
               'description' => $fieldSchema['label'],
               'field' => $fieldName,

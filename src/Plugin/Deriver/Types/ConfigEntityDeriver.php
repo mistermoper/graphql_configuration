@@ -54,11 +54,12 @@ class ConfigEntityDeriver extends DeriverBase implements ContainerDeriverInterfa
         continue;
       }
 
+      $name = StringHelper::camelCase('ConfigEntity', $typeId);
       $derivative = [
-        'name' => 'ConfigEntity' . StringHelper::camelCase($typeId),
+        'name' => $name,
         'entity_type' => $typeId,
         'description' => $typeId,
-        'type' => "Entity",
+        'type' => $name,
       ] + $basePluginDefinition;
 
       $this->derivatives[$typeId] = $derivative;

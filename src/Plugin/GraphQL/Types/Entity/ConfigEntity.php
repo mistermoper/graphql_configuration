@@ -13,7 +13,7 @@ use GraphQL\Type\Definition\ResolveInfo;
  * @GraphQLType(
  *   id = "config_entity",
  *   schema_cache_tags = {"config_entity_types"},
- *   interfaces = {"Entity"},
+ *   interfaces = {"ConfigEntity"},
  *   deriver = "Drupal\graphql_configuration\Plugin\Deriver\Types\ConfigEntityDeriver"
  * )
  */
